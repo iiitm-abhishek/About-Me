@@ -1,72 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>About Me</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
 </head>
+<style type="text/css"> 
+     body{
+         margin: 0;
+         padding: 0;
+         background: linear-gradient(green, purple);
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     }
+     header{
+         background: darkblue;
+         padding: 2%;
+         color: white;
+     }
+     header b{
+         font-size: 2em;
+     }
+     .container{
+        display: flex;
+        flex-wrap: wrap;
+     }
+     .image{
+        flex: 50%;
+     }
+     .text{
+        flex: 50%;
+     }
+     .text p{
+         color: antiquewhite;
+         font-size: 1.5em;
+         text-align: center;
+     }
+     .text{
+        margin-top: 8%;
+
+     }
+     .connect_links{
+       /* border: 2px solid blue;
+        height: fit-content;*/
+        display: flex;
+
+    }
+    .connect{
+       /* border: 2px solid red;*/
+        height: fit-content;
+        width: fit-content;
+        margin: auto;
+        flex-flow: column;
+    }
+    .connect:hover{
+        height: fit-content;
+        width: fit-content;
+        background-color: blue;
+        border-radius: 4px;
+    }
+    .insta:hover{
+        background-color: firebrick;
+    }
+     footer{
+         background: black;
+         padding: 1%;
+         font-size: 1.2em;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     footer p{
+         font-size: 2em;
+         color: white;
+     }
+    @media only screen and (max-width: 600px){
+       .image, .text{
+        flex: 100%;
+       }
+       .image img{
+        height: 390px;
+        width: 357px;
+       }
+       .text p, footer p{
+        font-size: 1em;
+       }
+    }
+    
+   
+</style>
 <body>
-	
-	<div class="navbar">
-		<a href="#about_me">Home</a>
-		<a href="#education">Education</a>
-		<a href="#follow_me">Follow Me</a>
-		<a href="#contact_me">Contact Me</a>
-	</div>
-	<div class="about-me" id="about_me">
-		<div id="para">
-			<p style="color: #21141f;">Hello </p>
-			<p style="color: #c9c4c8;">I am Abhishek Gautam</p>
-			<p style="color: #181785;">Full-stack Web-Developer</p>
-		</div>
-		<div class="flip-card">
-             <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                        <img src="./img/photo-2.jpg" alt="My Photo 2" height="300px" width="300px" style="border-radius: 13px;">
-                  </div>
-                  <div class="flip-card-back">
-                        <img src="./img/photo-1.jpg" alt="My Photo 1" height="300px" width="300px" style="border-radius: 13px;">
-                  </div>
-            </div>
+    <header>	
+	  <center><b>- About Me -</b></center>
+    </header>
+    <div class="container">
+        <div class="image">
+           <img src="./img/img-1.jpg" alt="My Photo" height="500" width="500">
         </div>
-		
-	</div>
-	<div class="education" id="education">
-		
-		<b>Education</b>
-		<div id="edu-para">
-			<div>
-				<img src="./img/education.png" alt="education logo" height="50px" width="50px">
-				<p>
-				    Information Technology (B.Tech  + M.Tech)
-				</p>
-		    </div>
-			<div>
-				<img src="./img/univercity-1.png" alt="univercity logo" height="50px " width="50px">
-				<p>
-					<a href="https://www.iiitm.ac.in">ABV - IIITM Gwalior, Madhya Pradesh</a>
-				</p>
-		    </div>
-	   </div>
-	</div>
-	<div class="follow-me" id="follow_me">
-		<b>Follow Me </b>
-		<div id="follow-link">
-			<a href="https://www.facebook.com/Abhishek Gautam"><img src="./img/fb.png" alt="FB logo" height="100px" width="100px"></a>
-		</div>
-		<div id="follow-link">
-			<a href="https://www.instagram.com/iiitm_abhishek"><img src="./img/insta-2.png" alt="FB logo" height="100px" width="100px"></a>
-		</div>
-	</div>
-	<div class="contact-me" id="contact_me">
-		<b>Contact Me</b>
-		<div id="contact-para">
-			<p>Email : <a href="mailto:abhishekraj7647@gmail.com" style="text-decoration: none;">abhishekraj7647@gmail.com</a></p>
-			<p>Call : 7068953158</p>
-			<p>Jaunpur, Uttar Pradesh, INDIA</p>
-		</div>
-	</div>
-
-
+        <div class="text">
+            <p>Hello everyone</p>
+            <p>I am Abhishek Gautam</p>
+            <p>Cricket Lover</p>
+            <p>Full Stack Web Developer</p>
+            <p>Studying Information Technology At ABV IIITM Gwalior M.P.</p>
+        </div>
+    </div>
+    
+<footer>
+    <div class="connect_links">
+        <div class="connect fb"> 
+            <a href="https://www.facebook.com/Abhishek Gautam" id="fb"><img id="link" src="./img/fb.png" alt="FB logo" height="60px" width="60px"></a>
+        </div>
+        <div class="connect git">
+            <a href="https://github.com/iiitm-abhishek"><img src="./img/git.png" alt="Git Logo" height="60px"
+                    width="60px"></a>
+        </div>
+        <div class="connect insta">
+                <a href="https://www.instagram.com/iiitm_abhishek" id="insta"><img id="link" src="./img/insta.png" alt="FB logo" height="60px" width="60px"></a>
+        </div>
+    </div>
+    <center><p>Made With <strong style="color: red">&#10084; </strong>By Abhishek Raj</p></center>
+</footer>
 </body>
 </html>
